@@ -3,6 +3,7 @@ from flask import jsonify, request
 from flask_cors import CORS
 import json
 import pymongo
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 connection = "mongodb://localhost:27017/"
 client = pymongo.MongoClient(connection)
@@ -37,6 +38,9 @@ for movie in initialMoviesData:
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
+
+app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1,
+                        x_port=1, x_for=1, x_host=1, x_prefix=1)
 
 CORS(app)
 
