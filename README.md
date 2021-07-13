@@ -14,6 +14,8 @@
  - score
 
  # Methods
- * /api/get_all - [GET] Displays all results in the collection name "movies"
- * /api/get_requested_movie - [GET] accepts 2 arguments in the url "movie" and "provider" and then returns "score" for particular "movie" and "provider"
- * /api/add_ratings - [POST] accepts 3 arguments in the form data "movie", "provider" and "score" and it adds ratings for that particular movie
+ | API Call                  | REQUEST       |        |
+ | -------------             | ------------- |
+ | /api/get_all              | [GET]         | displays all results in the collection name "movies"
+ | /api/get_requested_movie  | [GET]         | accepts 2 arguments in the url "movie" and "provider" and then returns "score" for particular "movie" and "provider"
+ | /api/add_ratings          | [POST]        | accepts 3 arguments in the form data "movie", "provider" and "score" and it adds ratings for that particular movie
