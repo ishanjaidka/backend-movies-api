@@ -34,5 +34,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "<!-- toc -->\r - [Read it first](#rif)\r - [Run this project](#rtp)\r - [Functionalities in the project](#fitp)\r - [Assumptions](#assump)",
+  "main": "index.js",
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@material-ui/core": "^4.12.1",
+    "bootstrap": "^5.0.2",
+    "fbemitter": "^3.0.0",
+    "react-bootstrap": "^1.6.1"
+  },
+  "author": "Ishan",
+  "license": "ISC"
 }
