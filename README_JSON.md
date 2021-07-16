@@ -18,4 +18,4 @@
  | ------------------------- | ------------- |------- |
  | /api/get_all              | [GET]         | displays all results in the collection name "movies" |
  | /api/get_requested_movie  | [GET]         | accepts 2 arguments in the url "movie" and "provider" and then returns "score" for particular "movie" and "provider" |
- | /api/add_ratings          | [POST]        | accepts 3 arguments in the form data "movie", "provider" and "score" and it adds ratings for that particular movie |
+ | /api/add_ratings          | [POST]        | accepts 3 arguments in the form data "movie", "provider" and "score" and it adds ratings for that particular movie and if Movie score for that particular provider already exists it overwrites the existing score in the database" |

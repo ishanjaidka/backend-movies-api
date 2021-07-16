@@ -14,7 +14,7 @@ db = client["movie_ratings"]
 # create a collection with movies
 movieCollection = db["movies"]
 
-initialMoviesDataFile = './movies.json'
+initialMoviesDataFile = './database/movies.json'
 # open file containing initial data
 f = open(initialMoviesDataFile)
 initialMoviesData = json.load(f)

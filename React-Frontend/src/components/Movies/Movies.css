@@ -1,0 +1,13 @@
+.movie__list {
+    /* background-image: url('../../assets/background.jpg'); */
+    width: 100%;
+    padding: 1em;
+}
+
+/* Hides scrolbar but functionality remains in place */
+*{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,54 @@
+/* Naming convention for class names that is being used is bemp */
+.topnav__row {
+    background-color: black;
+    color: white;
+    margin: 0 !important;
+}
+
+.topnav__row__col {
+    padding: 1em;
+    position: relative;
+    top: 0.5em;
+    padding-right: 2em !important;
+    padding-left: 2em !important;
+    
+}
+
+.topnav__row__col .form-group {
+    margin-top: 1em !important;
+}
+.error__input {
+    border: 1px solid red !important;
+}
+
+.search__button,
+.refresh__button {
+    min-width: 3em;
+    margin-top: 1em
+}
+
+.refresh__button {
+    margin-left: 0.5em;
+}
+
+.search__and__refresh_buttons {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+/* Media screen */
+@media screen and (max-width: 768px) {
+    .topnav__row {
+        height: 18em;
+    }
+
+    .topnav__row__col {
+        padding: 0;
+    }
+
+    .search__and__refresh_buttons button {
+        margin-top: 0;
+        margin-bottom: 1.5em;
+    }
+}

@@ -1,0 +1,13 @@
+/* Naming convention for class names that is being used is bemp */
+.submit__score {
+    top: 1em;
+    position: relative;
+    background-color: #578a4c !important;
+    border-color: #578a4c !important;
+    margin-bottom: 0.5em;
+}
+
+.modal-header,
+.modal-body {
+    background: whitesmoke;
+}

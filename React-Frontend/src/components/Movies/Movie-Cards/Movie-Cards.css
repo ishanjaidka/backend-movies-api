@@ -1,0 +1,23 @@
+/* Naming convention for class names that is being used is bemp */
+.movie__list .card {
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+}
+
+.movie__list img {
+    height: 15em;
+    width: 14em;
+}
+
+.back__button {
+    float: left;
+    position: absolute;
+    left: 2em;
+}
+
+.card-body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+}
