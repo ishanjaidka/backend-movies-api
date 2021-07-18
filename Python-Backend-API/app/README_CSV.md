@@ -20,14 +20,17 @@
 --
 <a name="assump" />
 # Assumptions/Prerequisites
-- Python is installed
+- Python or Python3 is installed
+- pip or pip3 is installed
+- You have clonned this project
+
 
 --
 <a name="rtp" />
 ### Run this project
-- Clone this project
-- Make sure this API is running on localhost or any ip as wanted
-- Run this project using "python app_csv.py"
+- Run cd Python-Backend-API
+- Run "pip/pip3 install -r requirements.txt"
+- Run this project using "python/python3 app_csv.py"
 - Project will run on http://localhost:5000 and use this url befor the api methods as mentioned below
 
 

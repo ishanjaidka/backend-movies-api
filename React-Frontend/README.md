@@ -3,9 +3,9 @@
 ##### Table of contents
 <!-- toc -->
 - [Read it first](#rif)
+- [Assumptions](#assump)
 - [Run this project](#rtp)
 - [Functionalities in the project](#fitp)
-- [Assumptions](#assump)
 
 <!-- tocstop -->
 
@@ -17,11 +17,17 @@
 - This project is a Front End for giving ratings for movies which is stored in the database
 
 --
+<a name="assump" />
+### Assumptions
+- Node and npm is installed
+- API is running on backend in (Python)
+- You have clonned this project
+
+
+--
 <a name="rtp" />
 ### Run this project
-- Clone Python API from another project 
-- Clone this project
-- Make sure Python API is running on localhost or any ip as wanted
+- Run cd React-Frontend
 - Copy the Python API URL and paste in the environment file in the APIEndpoint in this project
 - Run npm install for installing all the required packages
 - Run this project using npm start
@@ -38,8 +44,3 @@
 - If provider/user already has a rating submitted for a particular movie, the snackbar will show a message that 'Ratings for provider already exists!'
 - If a movie's rating is added and successfully saved in the database user will be shown a snackbad with a message that 'Movie with ratings added!' and movies list will be automatically refreshed.
 
---
-<a name="assump" />
-### Assumptions
-- Node and npm is installed
-- API is running on backend in (Python)

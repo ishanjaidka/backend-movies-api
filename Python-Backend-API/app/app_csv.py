@@ -33,7 +33,7 @@ def get_all_movies():
         # iterate through each row in the Movies.csv
         for row in csvreader:
             movieslist.append(row)
-    return jsonify(movieslist), 200
+    return jsonify({'movies':movieslist}), 200
 
 
 """ Get request to find score for a movie from a provider and this accepts data as form data """
@@ -50,7 +50,7 @@ def get_requested_movie():
             for row in csvreader:
                 if (row["movie"] == movieName and row["provider"] == providerName):
                     providerScore = row["rating"]
-        return jsonify(providerScore), 200
+        return jsonify({'score': providerScore}), 200
     else:
         return jsonify({'message': 'parameters is/are missing'})
 
@@ -72,7 +72,6 @@ def add_ratings():
                     if (row["movie"] == movieName and row["provider"] == providerName):
                         counter += 1
                         break
-        print(counter)
         if (counter == 0): 
             with open(initialMoviesDataFile, 'a', newline='') as file:
                 fieldnames = ['movie', 'provider', 'rating']
@@ -83,9 +82,7 @@ def add_ratings():
 
 
 
-app.run()
-
 if __name__ == '__main__':
     #define the localhost ip and the port that is going to be used
     # in some future article, we are going to use an env variable instead a hardcoded port 
-    app.run(host='0.0.0.0', port=5000, debug=True,threaded=True)
+    app.run(host='0.0.0.0', port=5000, debug='True' )

@@ -4,6 +4,6 @@
 
 
 // const APIEndpoint = 'http://131.236.87.85:5000/';
-const APIEndpoint = 'http://localhost:5000/';
+const APIEndpoint = 'https://melbourne-bookings.com.au/api/flask';
 
 export default APIEndpoint;

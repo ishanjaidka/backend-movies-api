@@ -12,7 +12,7 @@ const serverRequests = {
         let moviesList = [];
         await fetch(APIEndpoint + 'api/get_all')
         .then(res => res.json())
-        .then(data => moviesList = helperFunctions.GroupMoviesTogether(data))
+        .then(data => moviesList = helperFunctions.GroupMoviesTogether(data.movies))
         return moviesList;
     },
 

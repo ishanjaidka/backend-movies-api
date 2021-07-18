@@ -5,13 +5,57 @@ import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import StarRatings from '../Star-Ratings/Star-Ratings';
 import MovieDetails from '../Movie-Details/Movie-Details';
+import EventEmitter from '../../../utils/EventEmitter';
+
 
 class MovieCards extends Component {
     constructor(props) {
         super(props);
-        this.state = { stars: [...Array(5).keys()], ratings: 0, providers: [], showDetails: false };
+        this.state = { stars: [...Array(5).keys()], ratings: 0, providers: [], showDetails: false,
+            searchListener: EventEmitter.addListener('SearchRequested', this.searchMovie),
+            realoadListener:  EventEmitter.addListener('ReloadMovies', this.reloadMovies) }
         this.showDetailsOfACard = this.showDetailsOfACard.bind(this);
+        // EventEmitter.addListener('SearchRequested', this.searchMovie);
     }
+
+    componentDidMount() {
+        // EventEmitter.addListener('SearchRequested', this.searchMovie);
+    }
+
+    /**
+     * Search Movie event listener
+     * @param {*} eventData 
+     */
+    searchMovie = (eventData) => {
+        if(eventData) {
+            this.setState({
+                providers: [...eventData.providers],
+                showDetails: false
+            });
+        }
+    }
+
+    /**
+     * Event Listener when a movie score is added to the movies
+     * @param {*} eventData 
+     */
+     reloadMovies = (eventData) => {
+        if(eventData) {
+            this.setState({
+                providers: [],
+                showDetails: false
+            });
+        }
+    }
+
+    componentWillUnmount() {
+        this.setState({
+            searchListener: EventEmitter.remove(),
+            realoadListener: EventEmitter.remove()
+        })
+    }
+
+    
 
     /**
      * Shows details of a movie with rating providers
